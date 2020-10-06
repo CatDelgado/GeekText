@@ -1,0 +1,17 @@
+
+.center{
+  text-align: center;
+}
+.padding{
+    padding: 35px 0 25px 0;
+}
+
+img {
+  float:left;
+}
+.carouseltext {
+  vertical-align: text-top;
+  
+}
+
+
