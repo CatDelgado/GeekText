@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>GeekText</title>
+  <meta name="description" content="">
+  
+  <!-- Mobile Specific Metas–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/skeleton.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/account.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/headerandfooter.css') }}">  
+  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
+</head>
+<body >
+  
+  <header  class=" row main_nav header_color">
+    <div class="container">
+      <div class="four columns">
+        <a class=""  href="{{ url_for('home') }}"><strong>Geek</strong><em>Text</em></a>
+      </div>
+        <div class="one column">
+        <a class=""  href="{{ url_for('home') }}">Home</a>
+        </div>
+        <div class="one column">
+        <a class="" href="{{ url_for('wishlist') }}">Wish List</a>
+        </div> 
+        <div class="one column">
+        <a class="" href="{{ url_for('books') }}">Books</a>
+       </div>
+        <div class="one column">
+        <a class="" href="{{ url_for('shoppingcart') }}">Shopping Cart</a>
+       </div>
+       <div class="one column dropdown">
+        <a class="" href="{{ url_for('account') }}">Account</a>
+           <!-- <div class="dropdown"> -->
+                <!-- <button class="dropbtn">Books</button> -->
+                <div class="dropdownContent">
+                  <a href="{{ url_for('cards') }}">Cards</a>
+                  <a href="{{ url_for('account') }}">Profile</a>
+                  <a href="{{ url_for('address') }}">Address</a>
+                  <a href="{{ url_for('logout') }}">Log Out</a>
+              </div>
+      <!-- </div> -->
+      </div>
+        <div class="one column">
+        <a class="" href="{{ url_for('login') }}">Log In</a>
+        </div>
+        <div class="one column">
+        <button class="button-primary"><a href="{{ url_for('signup') }}">Sign Up</a></button>
+        </div>
+
+  </header>
+
+<div  class="main">
+  <div class="row container">
+<div  class="row botpadding">
+  <div  class="container">
+
+  <div class="product-add">
+    <a href="{{ url_for('cards')}}">
+      <button class="add-product"
+              type="submit">
+      Add/edit Card
+    </button></a>
+      <div class="product-add">
+        <a href="{{ url_for('cards2')}}">
+          <button class="add-product"
+                  type="submit">
+          Add/edit second Card
+        </button></a>
+</div>
+  <div class="product-add">
+    <a href="{{ url_for('address')}}">
+      <button class="add-product"
+              type="submit">
+      Add/edit Address
+    </button></a>
+    <div class="product-add">
+      <a href="{{ url_for('address2')}}">
+        <button class="add-product"
+                type="submit">
+        Add/edit second Address
+      </button></a>
+      <div class="product-add">
+        <a href="{{ url_for('editsignup')}}">
+          <button class="add-product"
+                  type="submit">
+          Edit credentials
+        </button></a>
+    </div>
+  </div>
+
+      <dl>
+        <div>
+          <label for="card_type">Email</label>
+      {{printemail.email}}
+      </div>
+      <div>
+        <label for="card_type">Name and Last Name</label> 
+      {{printemail.name}}
+    </div>
+    <label for="username">Username</label>
+      {{printemail.username}}
+      <div>
+        <label for="card_number">Cards</label> 
+                <div>
+                {{printemail.card_nickname}} -  {{printemail.card_type}}
+              </div>
+              <div>
+               
+              </div>
+              <div>
+                {{printemail.card_nickname2}} -  {{printemail.card_type2}}
+              </div>
+              <div>
+               
+              </div>
+    </div>
+    <div>
+      <label for="address">Address</label>
+      {{printemail.nickname}}
+    </div>
+    <div>
+      {{printemail.address_line_1}}
+    </div>
+    <div>
+      {{printemail.address_line_2}}
+    </div>
+    <div>
+      {{printemail.city}}
+    </div>
+    <div>
+     {{printemail.state}}
+     {{printemail.zip}}
+    </div>
+    <div>
+    </div>
+    <div>
+      {{printemail.nickname2}}
+    </div>
+    <div>
+      {{printemail.address_line_1_2}}
+    </div>
+    <div>
+      {{printemail.address_line_2_2}}
+    </div>
+    <div>
+      {{printemail.city2}}
+    </div>
+    <div>
+     {{printemail.state2}}
+     {{printemail.zip2}}
+    </div>
+    <div>
+   
+    </div>
+      </dl>
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+   
+  <footer class="row booksfooter">
+    <p class="copyright">&copy; 2020 GeekText. All Rights Reserved. </p>
+</footer>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
